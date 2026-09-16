@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ResultOfStudent</title>
+</head>
+<body>
+  <h1>Student Result CAlculator</h1>
+  <form>
+    <div><input type="text" placeholder = "enter the name" class="js-name"></div>
+    <br><br>
+  <div><input type ="number" placeholder="enter the marks for Sub1" class="js-sub1" ></div>
+  <br><br>
+  <div><input type = "number" placeholder="enter the marks for Sub2" class="js-sub2"></div>
+  <br><br>
+  <div><input type = "number" placeholder="enter the marks Sub3" class="js-sub3"></div>
+  <br><br>
+  <button type="button" onclick="Calculate()" placeholder="calculate">Calculate</button>
+  <br><br>
+  <button type="button" onclick="Percentage()" placeholder="calc Percentage" >Calculate Percentage</button>
+  <div class="js-name-display"></div>
+  <div class="js-total-marks"></div>
+</form>
+
+  <script>
+    let totalMarks;
+    let name;
+    let percentage;
+    function Calculate(){
+      name = document.querySelector('.js-name').value;
+      let sub1 = Number(document.querySelector('.js-sub1').value);
+      let sub2 = Number(document.querySelector('.js-sub2').value);
+      let sub3 = Number(document.querySelector('.js-sub3').value);
+      totalMarks = sub1 + sub2 + sub3;
+      document.querySelector('.js-name-display').innerHTML = (`Name of student is ${name}`);
+      document.querySelector('.js-total-marks').innerHTML = (`Total marks of student is ${totalMarks}`);
+    }
+    function Percentage(){
+      percentage = (totalMarks / 300) *100;
+      document.querySelector('.js-total-marks').innerHTML = (`Percentage of ${name} is ${percentage}%`);
+    }
+    
+   
+  </script>
+</body>
+</html>

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>events</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    .flexbox{
+      display: flex;
+      align-items: center;
+      align-content: center;
+      flex-direction: row;
+    }
+    .hover{
+      background-color: aqua;
+      height: 180px;
+      width: 180px;
+      border-radius: 20px;
+      border-color: blue;
+      text-align: center;
+    }
+    .click{
+      background-color: green;
+      height: 180px;
+      width: 180px;
+      border-color: blue;
+      border-radius: 20px;
+      text-align: center;
+    }
+    .dbclick{
+      background-color: rgb(234, 244, 43);
+      height: 180px;
+      width: 180px;
+      border-radius: 20px;
+      text-align: center;
+    }
+    .onmouseout{
+      background-color: orange;
+      height: 180px;
+      width: 180px;
+      border-radius: 20px;
+      border-color: blue;
+      text-align: center;
+    }
+    .onmouseup{
+      background-color: red;
+      height: 180px;
+      width: 180px;
+      border-radius: 20px;
+      border-color: blue;
+      text-align: center;
+    }
+    .onmousedown{
+      background-color: pink;
+      height: 180px;
+      width: 180px;
+      border-radius: 20px;
+      border-color: blue;
+      text-align: center;
+    }
+    .oncontextmenu{
+      background-color: brown;
+      height: 180px;
+      width: 180px;
+      border-radius: 20px;
+      border-color: blue;
+      text-align: center;
+    }
+    .form{
+      display: flex;
+      flex-direction: column;
+      background-color: green;
+      align-content: center;
+      align-items: center;
+      margin: 70px;
+      height: 350px;
+      width: 260px;
+      text-align: center;
+    }
+    .text1{
+      margin: 30px;
+      background-color: palevioletred;
+    }
+    .text2{
+      margin: 30px;
+      background-color: brown;
+    }
+    .text3{
+      margin: 30px;
+      background-color: aqua;
+    }
+
+    .form2{
+      display: flex;
+      flex-direction: column;
+      
+      align-content: center;
+      align-items: center;
+      margin: 70px;
+      height: 350px;
+      width: 260px;
+      text-align: center;
+    }
+
+    .text4{
+      margin: 30px;
+      background-color: palevioletred;
+    }
+    .text5{
+      margin: 30px;
+      background-color: brown;
+    }
+    .text6{
+      margin: 30px;
+      background-color: aqua;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="flexbox">
+   <div class="hover" onmouseover="event3()">hovere here</div>
+   <br>
+  <div class="click" onclick="event1()">Click Here</div>
+  <br>
+  <div class="dbclick" ondblclick="event2()">double click here</div>
+   <div class="onmouseout" onmouseout="event4()">onmouse out here</div>
+    <div class="onmousedown" onmousedown="event5()">onmouseup here</div>
+     <div class="onmouseup" onmouseup="event6()">onmouse down here</div>
+     <div class="oncontextmenu" oncontextmenu="event7()">oncontextmenu here</div>
+</div>
+<form class="form">
+  <h2>keyboard events</h2>
+  <h3>keydown</h3>
+    <input type="text" placeholder="enter text" onkeydown="event9()"  class="text1">
+    <h3>keyup</h3>
+  <input type="text" placeholder="enter text" onkeyup="event10()" class="text2">
+  <h3>keypress</h3>
+  <input type="text" placeholder="enter text" onkeypress="event11()" class="text3">
+
+</form>
+<!-- 
+<form class="form2">
+  <h2>keyboard this events</h2>
+  <h3>keydown</h3>
+    <input type="text" placeholder="enter text" onkeydown="alert(this.value)"  class="text4">
+    <h3>keyup</h3>
+  <input type="text" placeholder="enter text" onkeyup="alert(this.value)" class="text5">
+  <h3>keypress</h3>
+  <input type="text" placeholder="enter text" onkeypress="alert(this.value)" class="text6">
+
+</form> -->
+
+
+<form id = "form2">
+  <h1>keyboard event </h1>
+  <p>onkeydown</p>
+  <input type="text" class="form2" class="text4" onkeydown="document.getElementById('form2').style.background= this.value">
+   <p>onkeyup</p>
+  <input type="text" class="text5" class="form2" onkeyup="document.getElementById('form2').style.background= this.value">
+   <p>onkeypress</p>
+  <input type="text" class="text6" class="form2" onkeypress="document.getElementById('form2').style.background= this.value">
+</form>
+
+
+
+  <script>
+    function event1(){
+      alert('click event');
+    }
+    function event2(){
+      alert('double click event');
+    }
+    function event3(){
+      alert('hover event');
+    }
+    function event4(){
+      alert('mouseout event');
+    }
+    function event5(){
+      alert('mouseup event');
+    }
+    function event6(){
+      alert('mousedown event');
+    }
+    function event7(){
+      alert('oncontextmenu');
+    }
+    function event9(){
+      alert('onkeydown');
+    }
+    function event10(){
+      alert('onkeyup');
+    }
+    function event11(){
+      alert('onkeypress');
+    }
+ 
+  
+
+  </script>
+</body>
+</html>

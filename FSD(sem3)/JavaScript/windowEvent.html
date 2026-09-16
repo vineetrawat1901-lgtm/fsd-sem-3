@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>window event</title>
+</head>
+<body>
+  <button onclick="openWindow()"> click me </button>
+  <button onclick="closeWindow()"> close me </button>
+  <button onclick="moveWindow()"> move me </button>
+  <button onclick="moveByWindow()"> move By </button>
+
+  <script>
+    let a;
+    function openWindow(){
+      a=window.open("", "myWindow","width=500, height=200, top= 300 , left=400" );
+      a.document.write("<p>This is new Window</p>");
+    }
+    function closeWindow(){
+        a.close();
+    }
+    function moveWindow(){
+      a.moveTo(200,300);
+      a.focus();
+    }
+    function moveByWindow(){
+      a.moveBy(200,300);
+      a.focus();
+    }
+  </script>
+</body>
+</html>

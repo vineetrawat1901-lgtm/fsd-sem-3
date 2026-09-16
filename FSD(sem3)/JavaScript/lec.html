@@ -1,0 +1,29 @@
+<!-- write a program any two no.  -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+ </head>
+ <body>
+  <h1>Multiplication</h1>
+  <input placeholder = 'enter the first number' class = "js-num1">
+  <input placeholder = 'enter the second number' class = "js-num2">
+  <button type = "button" onclick = "multiplication()">Calculate</button>
+  <br><br>
+  <div class= "js-result"></div>
+
+  <script>
+    
+    function multiplication (){
+      let num1 = Number(document.querySelector('.js-num1').value);
+    let num2 = Number(document.querySelector('.js-num2').value);
+      let result = num1 * num2;
+      
+      document.querySelector('.js-result').innerHTML = (`result of ${num1} and ${num2} is ${result}`);
+
+    }
+  </script>
+ </body>
+ </html>
